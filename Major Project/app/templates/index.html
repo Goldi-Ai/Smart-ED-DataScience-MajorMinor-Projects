@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Loan Default Prediction</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body class="main-page">
+  <div class="container">
+    <h1>Loan Default Prediction</h1>
+    <form action="/predict" method="POST">
+
+  <!-- Age & Income -->
+  <div class="form-row">
+    <div class="field">
+      <label>Age</label>
+      <input type="number" name="Age" step="1" required>
+    </div>
+    <div class="field">
+      <label>Income</label>
+      <input type="number" name="Income" step="0.01" required>
+    </div>
+  </div>
+
+  <!-- Loan Amount & Loan Term -->
+  <div class="form-row">
+    <div class="field">
+      <label>LoanAmount</label>
+      <input type="number" name="LoanAmount" step="0.01" required>
+    </div>
+    <div class="field">
+      <label>LoanTerm (in months)</label>
+      <input type="number" name="LoanTerm" step="1" required>
+    </div>
+  </div>
+
+  <!-- Interest Rate & Credit Score -->
+  <div class="form-row">
+    <div class="field">
+      <label>InterestRate (%)</label>
+      <input type="number" name="InterestRate" step="0.01" required>
+    </div>
+    <div class="field">
+      <label>CreditScore</label>
+      <input type="number" name="CreditScore" step="1" required>
+    </div>
+  </div>
+
+  <!-- Months Employed & DTI Ratio -->
+  <div class="form-row">
+    <div class="field">
+      <label>MonthsEmployed</label>
+      <input type="number" name="MonthsEmployed" step="1" required>
+    </div>
+    <div class="field">
+      <label>DTIRatio</label>
+      <input type="number" name="DTIRatio" step="0.01" required>
+    </div>
+  </div>
+
+  <!-- HasMortgage & HasCoSigner -->
+  <div class="form-row">
+    <div class="field">
+      <label>HasMortgage</label>
+      <select name="HasMortgage" required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>HasCoSigner</label>
+      <select name="HasCoSigner" required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Marital Status & Has Dependents -->
+  <div class="form-row">
+    <div class="field">
+      <label>MaritalStatus</label>
+      <select name="MaritalStatus" required>
+        <option value="">Select</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Divorced">Divorced</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>HasDependents</label>
+      <select name="HasDependents" required>
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Num Credit Lines & Loan Purpose -->
+  <div class="form-row">
+    <div class="field">
+      <label>NumCreditLines</label>
+      <input type="number" name="NumCreditLines" step="1" required>
+    </div>
+    <div class="field">
+      <label>LoanPurpose</label>
+      <select name="LoanPurpose" required>
+        <option value="">Select</option>
+        <option value="Home">Home</option>
+        <option value="Car">Car</option>
+        <option value="Education">Education</option>
+        <option value="Business">Business</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Employment Type & Education -->
+  <div class="form-row">
+    <div class="field">
+      <label>EmploymentType</label>
+      <select name="EmploymentType" required>
+        <option value="">Select</option>
+        <option value="Salaried">Salaried</option>
+        <option value="Self-employed">Self-employed</option>
+        <option value="Unemployed">Unemployed</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>Education</label>
+      <select name="Education" required>
+        <option value="">Select</option>
+        <option value="Graduate">Graduate</option>
+        <option value="Not Graduate">Not Graduate</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Submit -->
+  <div class="button-row">
+    <button type="submit" class="btn btn-primary">Predict</button>
+  </div>
+</form>
+
+</body>
+</html>
