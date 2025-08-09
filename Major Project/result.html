@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body class="main-page">
+  <div class="container">
+    <h1>Prediction Result</h1>
+
+    <span class="badge {{ badge_color }}">{{ prediction }}</span>
+    <p>Prediction Confidence: <strong>{{ probability }}%</strong></p>
+
+    <a href="/" class="button">Try another input</a>
+</body>
+</html>
